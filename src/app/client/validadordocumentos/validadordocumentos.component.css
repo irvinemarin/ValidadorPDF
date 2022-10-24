@@ -6,7 +6,7 @@
 .container-frame {
   /*background: rgb(240, 239, 239);*/
   /*padding: 10px;*/
-  height: calc(100vh - 101px - 16px - 41px);
+  height: calc(100vh - 80px - 50px - 32px);
   /*overflow: auto;*/
 }
 
