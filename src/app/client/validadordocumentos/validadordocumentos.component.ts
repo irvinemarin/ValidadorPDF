@@ -16,6 +16,8 @@ export class ValidadordocumentosComponent implements OnInit {
   titulo = "";
 
   @ViewChild('swallAccept') private swall: SwalComponent;
+  nombreFile = "DocumentoPrueba.pdf";
+  actions_zoom = 1
 
   constructor(
     private validadordocumentoservice: ValidadordocumentosService,
@@ -26,8 +28,8 @@ export class ValidadordocumentosComponent implements OnInit {
   ngOnInit(): void {
 
     this.activateRouter.params.subscribe((param: Params) => {
-      this.cargar(param["code"]);
-      // this.cargar("201500349500121700020220527093103.pdf");
+      if (param["code"]) this.cargar(param["code"]);
+      else this.titulo = "404 no found"
     });
   }
 
@@ -49,5 +51,22 @@ export class ValidadordocumentosComponent implements OnInit {
         this.swall.fire();
       });
 
+  }
+
+  PrintFilePDf() {
+    const linkSource = this.srcBase64;
+    const downloadLink = document.createElement("a");
+    const fileName = this.nombreFile;
+    downloadLink.href = linkSource;
+    downloadLink.download = fileName;
+    downloadLink.click();
+  }
+
+  changeZoom(count: string) {
+    if (count == "1")
+      this.actions_zoom++;
+
+    if (count == "-1" && this.actions_zoom > 1)
+      this.actions_zoom--;
   }
 }
