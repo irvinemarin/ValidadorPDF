@@ -69,4 +69,8 @@ export class ValidadordocumentosComponent implements OnInit {
     if (count == "-1" && this.actions_zoom > 1)
       this.actions_zoom--;
   }
+
+  isMoreSizeMD() {
+    return window.innerWidth > 670;
+  }
 }
