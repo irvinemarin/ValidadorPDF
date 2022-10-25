@@ -10,14 +10,20 @@ import {DragDropModule} from "@angular/cdk/drag-drop";
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {NgChartsModule} from "ng2-charts";
-import { PdfViewerModule } from 'ng2-pdf-viewer';
-import {ValidadordocumentosComponent} from './client/validadordocumentos/validadordocumentos.component';
+import {PdfViewerModule} from 'ng2-pdf-viewer';
+import {ValidadordocumentosComponent} from './componentes/client/validadordocumentos/validadordocumentos.component';
 import {SweetAlert2Module} from "@sweetalert2/ngx-sweetalert2";
+import { NavComponent } from './partials/nav/nav.component';
+import { FooterComponent } from './partials/footer/footer.component';
+import { ErrorPageComponent } from './partials/error-page/error-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ValidadordocumentosComponent
+    ValidadordocumentosComponent,
+    NavComponent,
+    FooterComponent,
+    ErrorPageComponent
   ],
   imports: [
     PdfViewerModule,

@@ -1,7 +1,4 @@
-.navbar {
-  border-bottom: 15px solid #9A1413;
-  background: #fff;
-}
+
 
 .container-frame {
   /*background: rgb(240, 239, 239);*/
@@ -70,16 +67,6 @@
   border-bottom-left-radius: 0;
 }
 
-/**footer**/
-.containerFooter {
-  width: 100%;
-  padding: 5px;
-  color: white;
-  font-size: 12px;
-  margin-top: auto;
-  text-align: center;
-  background: #9A1413;
-}
 
 /** scroll **/
 .container-frame::-webkit-scrollbar {

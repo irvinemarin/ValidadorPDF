@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import {Validadordocumentos} from './validadordocumentos';
-import {ValidadordocumentosService} from './validadordocumentos.service';
+import {Validadordocumentos} from '../../../rest/validadordocumentos';
+import {ValidadordocumentosService} from '../../../rest/validadordocumentos.service';
 import {SwalComponent} from "@sweetalert2/ngx-sweetalert2";
 
 @Component({
@@ -29,7 +29,7 @@ export class ValidadordocumentosComponent implements OnInit {
 
     this.activateRouter.params.subscribe((param: Params) => {
       if (param["code"]) this.cargar(param["code"]);
-      else this.titulo = "404 no found"
+      else window.location.replace("error")
     });
   }
 
